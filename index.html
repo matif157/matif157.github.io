@@ -6,7 +6,7 @@
 <title>Muhammad Atif — CRM & Business Software Developer</title>
 <meta name="description" content="Muhammad Atif — CRM & Business Software Developer. I turn paper processes into software that runs your business: live billing, bookings, payments, WhatsApp reminders and reports. Production systems in daily use. Faisalabad, Pakistan — working worldwide.">
 <meta name="author" content="Muhammad Atif">
-<meta name="theme-color" content="#0b1020">
+<meta name="theme-color" content="#05070d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Muhammad Atif">
 <meta property="og:title" content="Muhammad Atif — CRM & Business Software Developer">
@@ -43,26 +43,47 @@
   "knowsAbout": ["PHP", "MySQL", "CRM systems", "business software", "automation", "billing systems", "reporting dashboards"]
 }
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%234f8cf7' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305070d'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%2322d3ee' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<script src="assets/main.js" defer></script>
 </head>
-<body>
-<div class="bg-grid"></div>
+<body class="no-scroll">
+<div class="bg-layer" aria-hidden="true">
+  <canvas id="net" data-net></canvas>
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+  <div class="bg-vignette"></div>
+</div>
+
+<div id="progress" class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><div class="cursor-dot"></div><div class="cursor-ring"></div></div>
 
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="#top">MA<span class="brand-dot">.</span></a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#for-owners">Owners</a>
-      <a href="#for-developers">Tech</a>
-      <a href="#for-hr">HR</a>
-      <a href="#contact">Contact</a>
+      <a href="#work" data-nav>Work</a>
+      <a href="#for-owners" data-nav>Owners</a>
+      <a href="#for-developers" data-nav>Tech</a>
+      <a href="#for-hr" data-nav>HR</a>
+      <a href="#contact" data-nav>Contact</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="mailto:matifzahoor1577@gmail.com">Hire me</a>
+    <div class="header-right">
+      <span class="sys-clock" aria-hidden="true"><i class="live-dot"></i><span id="clock">SYS · UTC+5 00:00:00</span></span>
+      <a class="btn btn-primary btn-sm" href="mailto:matifzahoor1577@gmail.com" data-mag>Hire me</a>
+    </div>
+  </div>
+  <div class="status-strip" aria-hidden="true">
+    <div class="status-track">
+      <span>LIVE DEMO <b>→</b> asif-snooker-club.site.je · login: admin@demo.local / demo12345</span>
+      <span>REALTIME<em>·</em>BILLING<em>·</em>PAYMENTS<em>·</em>BOOKINGS<em>·</em>REPORTS<em>·</em>WHATSAPP REMINDERS<em>·</em>₋AUDIT TRAIL</span>
+      <span class="status-ts" id="status-ts">UTC+5 00:00:00</span>
+      <span>OPEN TO PROJECTS & ROLES</span>
+    </div>
   </div>
 </header>
 
@@ -71,19 +92,19 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">CRM &amp; Business Software Developer</p>
-        <h1>I turn paper processes into software that <span class="accent">runs the business</span>.</h1>
-        <p class="lead">
+        <p class="eyebrow reveal"><span class="sec-index">// 00</span> SYSTEMS ENGINEER · CRM &amp; BUSINESS SOFTWARE</p>
+        <h1 class="reveal" data-reveal-delay="60">I turn paper processes into software that <span class="accent">runs the business</span>.</h1>
+        <p class="lead reveal" data-reveal-delay="120">
           I plan, build and ship the systems small businesses actually run on — live billing,
           bookings, payments, WhatsApp reminders and reports. No bloated demos: production software,
           in daily use, and open on GitHub for any developer to inspect.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">See the live systems</a>
-          <a class="btn btn-ghost" href="assets/Muhammad-Atif-CRM-Developer-Resume-v2.pdf" target="_blank" rel="noopener">Resume .pdf &#8599;</a>
-          <a class="btn btn-ghost" href="assets/Muhammad-Atif-CRM-Developer-Resume-v2.docx" target="_blank" rel="noopener">Resume .doc &#8599;</a>
+        <div class="hero-actions reveal" data-reveal-delay="180">
+          <a class="btn btn-primary" href="#work" data-mag>See the live systems</a>
+          <a class="btn btn-ghost" href="assets/Muhammad-Atif-CRM-Developer-Resume-v2.pdf" target="_blank" rel="noopener" data-mag>Resume .pdf &#8599;</a>
+          <a class="btn btn-ghost" href="assets/Muhammad-Atif-CRM-Developer-Resume-v2.docx" target="_blank" rel="noopener" data-mag>Resume .doc &#8599;</a>
         </div>
-        <div class="hero-meta">
+        <div class="hero-meta reveal" data-reveal-delay="240">
           <span>Faisalabad, Pakistan · UTC+5</span>
           <span class="sep">·</span>
           <span>Working with businesses worldwide</span>
@@ -92,23 +113,28 @@
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="visual-ring r1"></div>
-        <div class="visual-ring r2"></div>
-        <div class="visual-ring r3"></div>
-        <div class="floating-chip chip-a">01 · Production CRMs</div>
-        <div class="floating-chip chip-b">02 · Workflow automation</div>
-        <div class="floating-chip chip-c">03 · WhatsApp + AI ready</div>
-        <div class="system-card">
-          <div class="photo-frame"><img src="assets/atif-profile.jpg" alt="Muhammad Atif — CRM and business software developer" width="180" height="180"></div>
-          <div class="system-meta"><i class="dot"></i><div><strong>Muhammad Atif</strong><span>CRM &amp; Business Software Developer</span></div></div>
-          <div class="terminal">
-            <div class="terminal-bar"><i></i><i></i><i></i><em>workflow.engine</em></div>
-            <code>
-              <span class="t1">business</span> → requirements → <span class="t2">data</span> → automation → <span class="t3">software</span><br>
-              <span class="t1">$crm</span> = billing + bookings + payments + reports;<br>
-              <span class="t1">$agents</span> = reminders + broadcasts + human approval;
-            </code>
+      <div class="hero-visual reveal" data-reveal-delay="140">
+        <div class="console" data-console>
+          <div class="console-bar">
+            <span class="bar-dots"><i></i><i></i><i></i></span>
+            <span class="bar-title">asif/crm — live.activity</span>
+            <span class="bar-live"><i class="live-dot"></i>REALTIME</span>
+          </div>
+          <div class="console-stats">
+            <div class="cstat"><span class="cstat-k">MEMBERS</span><span class="cstat-v" data-count="52">0</span></div>
+            <div class="cstat"><span class="cstat-k">SESSIONS</span><span class="cstat-v" data-count="229">0</span></div>
+            <div class="cstat"><span class="cstat-k">LIVE TABLES</span><span class="cstat-v cstat-ok" data-count="3">0</span></div>
+            <div class="cstat"><span class="cstat-k">TODAY ₨</span><span class="cstat-v" data-count="48">0</span></div>
+          </div>
+          <div class="console-spark" aria-hidden="true">
+            <i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:66%"></i><i style="--h:58%"></i><i style="--h:74%"></i><i style="--h:63%"></i><i style="--h:81%"></i><i style="--h:70%"></i><i style="--h:88%"></i><i style="--h:76%"></i><i style="--h:92%"></i><i style="--h:84%"></i><i style="--h:97%"></i><i style="--h:90%"></i><i style="--h:100%"></i>
+          </div>
+          <div class="console-feed">
+            <ul id="live-feed" aria-live="polite" aria-label="Live system activity"></ul>
+          </div>
+          <div class="console-foot">
+            <span>workflow.engine — <b class="ok">HEALTHY</b></span>
+            <span class="photo-tag"><img src="assets/atif-profile.jpg" alt="Muhammad Atif — CRM and business software developer" width="22" height="22"> Muhammad Atif</span>
           </div>
         </div>
       </div>
@@ -119,20 +145,20 @@
   <section class="section-short" id="for-you">
     <div class="container">
       <div class="gate">
-        <a class="gate-card" href="#for-owners">
-          <span class="gate-icon" aria-hidden="true">🏪</span>
+        <a class="gate-card" href="#for-owners" data-spot>
+          <span class="gate-icon" aria-hidden="true">&#9673;</span>
           <strong>For business owners</strong>
           <span>How I fix your daily chaos — registers, billing, cash control, reports. In plain words.</span>
           <em>See what clients get &#8594;</em>
         </a>
-        <a class="gate-card" href="#for-developers">
+        <a class="gate-card" href="#for-developers" data-spot>
           <span class="gate-icon" aria-hidden="true">&#60;&#47;&#62;</span>
           <strong>For developers &amp; technical teams</strong>
           <span>Architecture, security, code quality and how everything is built — sources wide open.</span>
           <em>Read under the hood &#8594;</em>
         </a>
-        <a class="gate-card" href="#for-hr">
-          <span class="gate-icon" aria-hidden="true">◎</span>
+        <a class="gate-card" href="#for-hr" data-spot>
+          <span class="gate-icon" aria-hidden="true">&#9729;</span>
           <strong>For HR &amp; recruiters</strong>
           <span>Role, timeline, skills, resume and how to verify it all in two minutes.</span>
           <em>Get the quick facts &#8594;</em>
@@ -152,19 +178,19 @@
   <!-- Metrics -->
   <section class="metrics">
     <div class="container metrics-grid">
-      <div class="metric">
+      <div class="metric reveal">
         <div class="metric-num"><span class="count" data-count="3">0</span><span>+</span></div>
         <div class="metric-label">Production CRM systems built &amp; running</div>
       </div>
-      <div class="metric">
+      <div class="metric reveal" data-reveal-delay="80">
         <div class="metric-num"><span class="count" data-count="50">0</span><span>+</span></div>
         <div class="metric-label">Commits shipped on production systems</div>
       </div>
-      <div class="metric">
+      <div class="metric reveal" data-reveal-delay="160">
         <div class="metric-num"><span class="count" data-count="4">0</span></div>
         <div class="metric-label">Public repos — every project open &amp; inspectable</div>
       </div>
-      <div class="metric">
+      <div class="metric reveal" data-reveal-delay="240">
         <div class="metric-num"><span class="count" data-count="2">0</span></div>
         <div class="metric-label">Training guides shipped for real staff (Urdu, picture-based)</div>
       </div>
@@ -174,14 +200,15 @@
   <!-- Owners -->
   <section class="section" id="for-owners">
     <div class="container">
-      <div class="section-head">
-        <h2>For business owners</h2>
+      <div class="section-head reveal">
+        <p class="sec-label"><span class="sec-index">// 01</span> PROGRAM: BUSINESS OWNERS</p>
+        <h2>Your chaos, on a single screen</h2>
         <p>You run a club, service firm, sales team or shop. Paper, registers and memory are stealing your money and your time.</p>
       </div>
 
-      <div class="compare">
-        <div class="compare-col compare-before">
-          <h3>Running on paper</h3>
+      <div class="compare reveal">
+        <div class="compare-col compare-before" data-spot>
+          <h3><span class="badge badge-bad">OFFLINE</span> Running on paper</h3>
           <ul>
             <li>End-of-day tallying is slow and error-prone</li>
             <li>You can't see today's cash until someone writes it down</li>
@@ -190,8 +217,8 @@
             <li>One person holds all the knowledge. If they leave, the system breaks</li>
           </ul>
         </div>
-        <div class="compare-col compare-after">
-          <h3>Running on software I build</h3>
+        <div class="compare-col compare-after" data-spot>
+          <h3><span class="badge badge-ok">REALTIME</span> Running on software I build</h3>
           <ul>
             <li>Live billing — the price calculates itself the second the service ends</li>
             <li>Today's cash, sessions and expenses on one real-time screen</li>
@@ -202,13 +229,13 @@
         </div>
       </div>
 
-      <div class="process">
-        <h3>How a project with me works</h3>
+      <div class="process reveal">
+        <h3 class="subhead">How a project with me works</h3>
         <div class="process-grid">
-          <div class="step"><span class="step-num">1</span><h4>Discover</h4><p>You tell me how your business actually works — I map the workflow in plain language. One call or chat.</p></div>
-          <div class="step"><span class="step-num">2</span><h4>Build</h4><p>I build the system on PHP + MySQL — fast, cheap to run, yours to keep. You see progress on a live demo as it grows.</p></div>
-          <div class="step"><span class="step-num">3</span><h4>Train</h4><p>I train your staff with picture-based guides in their language — no technical background needed.</p></div>
-          <div class="step"><span class="step-num">4</span><h4>Support</h4><p>You get a working system and a developer who answers. Updates, backups and fixes as your business changes.</p></div>
+          <div class="step" data-spot><span class="step-num">01</span><h4>Discover</h4><p>You tell me how your business actually works — I map the workflow in plain language. One call or chat.</p></div>
+          <div class="step" data-spot><span class="step-num">02</span><h4>Build</h4><p>I build the system on PHP + MySQL — fast, cheap to run, yours to keep. You see progress on a live demo as it grows.</p></div>
+          <div class="step" data-spot><span class="step-num">03</span><h4>Train</h4><p>I train your staff with picture-based guides in their language — no technical background needed.</p></div>
+          <div class="step" data-spot><span class="step-num">04</span><h4>Support</h4><p>You get a working system and a developer who answers. Updates, backups and fixes as your business changes.</p></div>
         </div>
       </div>
     </div>
@@ -217,7 +244,8 @@
   <!-- Work -->
   <section class="section section-alt" id="work">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
+        <p class="sec-label"><span class="sec-index">// 02</span> DEPLOYED SYSTEMS</p>
         <h2>Selected work</h2>
         <p>Two views of the same systems — pick the one that matters to you.</p>
         <div class="view-toggle" role="tablist" aria-label="Project view">
@@ -226,9 +254,9 @@
         </div>
       </div>
 
-      <article class="project project-featured" data-card>
+      <article class="project project-featured" data-card data-spot>
         <div class="project-body">
-          <span class="tag">Flagship · Live production</span>
+          <span class="tag"><i class="live-dot"></i>Flagship · Live production · try the login</span>
           <h3>Asif Snooker Club — Club Management CRM</h3>
 
           <div class="project-copy" data-block="business">
@@ -263,15 +291,15 @@
           </div>
 
           <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="https://github.com/matif157/asif-snooker-club" target="_blank" rel="noopener">Source on GitHub &#8599;</a>
-            <a class="btn btn-ghost" style="display:inline-block;margin-right:8px" href="https://asif-snooker-club.site.je" target="_blank" rel="noopener">Live demo &#8599;</a>
-            <a class="btn btn-ghost btn-sm" href="#gallery">See real screenshots &#8595;</a>
+            <a class="btn btn-primary btn-sm" href="https://github.com/matif157/asif-snooker-club" target="_blank" rel="noopener" data-mag>Source on GitHub &#8599;</a>
+            <a class="btn btn-live btn-sm" href="https://asif-snooker-club.site.je" target="_blank" rel="noopener" data-mag><i class="live-dot"></i>Launch live demo &#8599;</a>
+            <a class="btn btn-ghost btn-sm" href="#gallery" data-mag>See real screenshots &#8595;</a>
           </div>
         </div>
       </article>
 
       <div class="project-grid">
-        <article class="project" data-card>
+        <article class="project" data-card data-spot>
           <div class="project-body">
             <span class="tag">Work · Professional services</span>
             <h3>Gravity CRM — Syed Professional Services</h3>
@@ -301,12 +329,12 @@
               <div class="project-meta"><span>PHP</span><span>MySQL</span><span>Event-driven</span><span>AI orchestration</span></div>
             </div>
             <div class="project-links">
-              <a class="btn btn-ghost btn-sm" href="https://github.com/matif157/gravityh" target="_blank" rel="noopener">Source on GitHub &#8599;</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/matif157/gravityh" target="_blank" rel="noopener" data-mag>Source on GitHub &#8599;</a>
             </div>
           </div>
         </article>
 
-        <article class="project" data-card>
+        <article class="project" data-card data-spot>
           <div class="project-body">
             <span class="tag">Open source</span>
             <h3>Syed Professional CRM Platform</h3>
@@ -334,7 +362,7 @@
               <div class="project-meta"><span>PHP 8</span><span>MySQL</span><span>XAMPP</span></div>
             </div>
             <div class="project-links">
-              <a class="btn btn-ghost btn-sm" href="https://github.com/matif157/syed-professional-crm" target="_blank" rel="noopener">Source on GitHub &#8599;</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/matif157/syed-professional-crm" target="_blank" rel="noopener" data-mag>Source on GitHub &#8599;</a>
             </div>
           </div>
         </article>
@@ -345,26 +373,27 @@
   <!-- Gallery -->
   <section class="section" id="gallery">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
+        <p class="sec-label"><span class="sec-index">// 03</span> EVIDENCE · PRODUCTION UPTIME</p>
         <h2>Proof on screen</h2>
         <p>Real screenshots from the production Asif Snooker Club system — the owner uses these daily.</p>
       </div>
       <div class="gallery">
-        <figure>
+        <figure class="reveal">
           <a href="assets/crm-02-dashboard.jpg" target="_blank" rel="noopener"><img src="assets/crm-02-dashboard.jpg" alt="Operational dashboard with live KPI cards" loading="lazy"></a>
-          <figcaption>Operational dashboard — live KPIs and needs-attention alerts</figcaption>
+          <figcaption><span class="fig-idx">001</span>Operational dashboard — live KPIs and needs-attention alerts</figcaption>
         </figure>
-        <figure>
+        <figure class="reveal" data-reveal-delay="80">
           <a href="assets/crm-05-bookings.jpg" target="_blank" rel="noopener"><img src="assets/crm-05-bookings.jpg" alt="Bookings with advance deposits and status workflow" loading="lazy"></a>
-          <figcaption>Bookings — deposits, status workflow, automatic expiry</figcaption>
+          <figcaption><span class="fig-idx">002</span>Bookings — deposits, status workflow, automatic expiry</figcaption>
         </figure>
-        <figure>
+        <figure class="reveal" data-reveal-delay="160">
           <a href="assets/crm-12-reports-daily.jpg" target="_blank" rel="noopener"><img src="assets/crm-12-reports-daily.jpg" alt="Daily cash report" loading="lazy"></a>
-          <figcaption>Daily report — sessions, cash, WhatsApp share</figcaption>
+          <figcaption><span class="fig-idx">003</span>Daily report — sessions, cash, WhatsApp share</figcaption>
         </figure>
-        <figure>
+        <figure class="reveal" data-reveal-delay="240">
           <a href="assets/crm-13-reports-pnl.jpg" target="_blank" rel="noopener"><img src="assets/crm-13-reports-pnl.jpg" alt="Profit and loss report" loading="lazy"></a>
-          <figcaption>P&amp;L — revenue vs expenses, net profit, breakdowns</figcaption>
+          <figcaption><span class="fig-idx">004</span>P&amp;L — revenue vs expenses, net profit, breakdowns</figcaption>
         </figure>
       </div>
     </div>
@@ -373,39 +402,40 @@
   <!-- Developers -->
   <section class="section section-alt" id="for-developers">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
+        <p class="sec-label"><span class="sec-index">// 04</span> ARCHITECTURE REVIEW</p>
         <h2>Under the hood</h2>
         <p>The senior-developer view: how systems are engineered, and where to verify it.</p>
       </div>
 
       <div class="cap-grid">
-        <div class="cap">
-          <h4>Data &amp; reporting</h4>
+        <div class="cap" data-spot>
+          <h4><span class="cap-rect"></span>Data &amp; reporting</h4>
           <p>MySQL with prepared statements, indexes for reporting queries, export pipelines (CSV/SQL) and print-ready reports.</p>
         </div>
-        <div class="cap">
-          <h4>Billing &amp; payments engine</h4>
+        <div class="cap" data-spot>
+          <h4><span class="cap-rect"></span>Billing &amp; payments engine</h4>
           <p>Rate bands, peak/night multipliers, minimums, partial payments, deposits, e-invoices and receipts — the logic lives in one engine, not in page code.</p>
         </div>
-        <div class="cap">
-          <h4>Security &amp; permissions</h4>
+        <div class="cap" data-spot>
+          <h4><span class="cap-rect"></span>Security &amp; permissions</h4>
           <p>CSRF tokens, throttling, RBAC with editable permission matrices, audit logging of every significant change.</p>
         </div>
-        <div class="cap">
-          <h4>Workflow automation</h4>
+        <div class="cap" data-spot>
+          <h4><span class="cap-rect"></span>Workflow automation</h4>
           <p>Event-driven triggers, scheduled reminders via cron, zero-cost WhatsApp via wa.me, broadcast center, follow-up recovery.</p>
         </div>
-        <div class="cap">
-          <h4>Self-host &amp; deploy</h4>
+        <div class="cap" data-spot>
+          <h4><span class="cap-rect"></span>Self-host &amp; deploy</h4>
           <p>No platform lock-in. Runs on ordinary shared hosting, Docker, or a $5 VPS. Installer + config screen so non-developers can operate it.</p>
         </div>
-        <div class="cap">
-          <h4>Documentation &amp; training</h4>
+        <div class="cap" data-spot>
+          <h4><span class="cap-rect"></span>Documentation &amp; training</h4>
           <p>Picture-based Urdu and English guides, 52 pages — proof that a non-technical team adopted the system in days.</p>
         </div>
       </div>
 
-      <div class="terminal code-block" aria-hidden="true">
+      <div class="terminal code-block reveal" aria-hidden="true">
         <div class="terminal-bar"><i></i><i></i><i></i><em>asif-snooker-club · run anywhere</em></div>
         <code>
           <span class="c1">$</span> git clone <span class="t2">https://github.com/matif157/asif-snooker-club</span><br>
@@ -415,7 +445,10 @@
         </code>
       </div>
 
-      <h3 class="subhead">Live open-source activity</h3>
+      <div class="gh-head reveal">
+        <h3 class="subhead">Live open-source activity</h3>
+        <span class="live-badge"><i class="live-dot"></i>syncing from api.github.com</span>
+      </div>
       <p class="subtext" id="gh-note">Fetching from GitHub…</p>
       <ul id="gh-repos" class="gh-repos" aria-live="polite"></ul>
     </div>
@@ -424,41 +457,42 @@
   <!-- HR -->
   <section class="section" id="for-hr">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
+        <p class="sec-label"><span class="sec-index">// 05</span> CANDIDATE BRIEF</p>
         <h2>HR &amp; recruiters — quick facts</h2>
         <p>Everything you need in one screen. Everything is verifiable in two minutes.</p>
       </div>
 
       <div class="hr-grid">
-        <div class="hr-card">
-          <h4>Role</h4>
+        <div class="hr-card reveal" data-spot>
+          <h4><span class="cap-rect"></span>Role</h4>
           <ul>
             <li>CRM &amp; Business Software Developer</li>
             <li>Full-stack lean — PHP, MySQL, vanilla JS</li>
             <li>Faisalabad, Pakistan (UTC+5), remote worldwide</li>
           </ul>
         </div>
-        <div class="hr-card">
-          <h4>Experience</h4>
+        <div class="hr-card reveal" data-reveal-delay="80" data-spot>
+          <h4><span class="cap-rect"></span>Experience</h4>
           <ul>
             <li>2024 — present · CRM Developer, Syed Professional Services</li>
             <li>Ongoing · Independent production builds + staff training</li>
             <li>3+ production systems, 50+ commits on live systems</li>
           </ul>
         </div>
-        <div class="hr-card">
-          <h4>Verify me →</h4>
+        <div class="hr-card reveal" data-reveal-delay="160" data-spot>
+          <h4><span class="cap-rect"></span>Verify me →</h4>
           <ul>
             <li>Open-source repos: <a href="https://github.com/matif157" target="_blank" rel="noopener">github.com/matif157</a></li>
-            <li>Live demo logs in Phase 2 — try the system yourself</li>
+            <li>Live demo: <a href="https://asif-snooker-club.site.je" target="_blank" rel="noopener">asif-snooker-club.site.je</a> — try the login yourself</li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-atif-932824287" target="_blank" rel="noopener">muhammad-atif-932824287</a></li>
             <li>Resume: <a href="assets/Muhammad-Atif-CRM-Developer-Resume-v2.pdf" target="_blank" rel="noopener">.pdf</a> · <a href="assets/Muhammad-Atif-CRM-Developer-Resume-v2.docx" target="_blank" rel="noopener">.doc</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="skills-grid">
-        <div class="skill-group">
+      <div class="skills-grid reveal">
+        <div class="skill-group" data-spot>
           <h4>Backend</h4>
           <ul>
             <li>PHP 8</li>
@@ -468,7 +502,7 @@
             <li>Cron &amp; CLI tooling</li>
           </ul>
         </div>
-        <div class="skill-group">
+        <div class="skill-group" data-spot>
           <h4>System design</h4>
           <ul>
             <li>Custom MVC architecture</li>
@@ -478,7 +512,7 @@
             <li>Backup &amp; restore</li>
           </ul>
         </div>
-        <div class="skill-group">
+        <div class="skill-group" data-spot>
           <h4>Frontend</h4>
           <ul>
             <li>JavaScript / Alpine.js</li>
@@ -488,7 +522,7 @@
             <li>Tailwind</li>
           </ul>
         </div>
-        <div class="skill-group">
+        <div class="skill-group" data-spot>
           <h4>Integrations</h4>
           <ul>
             <li>WhatsApp (wa.me)</li>
@@ -505,14 +539,15 @@
   <!-- Experience -->
   <section class="section section-alt" id="experience">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
+        <p class="sec-label"><span class="sec-index">// 06</span> CHANGELOG</p>
         <h2>Experience</h2>
         <p>Where the production experience comes from.</p>
       </div>
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-mark"></div>
-          <div class="timeline-body">
+          <div class="timeline-body" data-spot>
             <div class="timeline-head">
               <h3>CRM Developer</h3>
               <span class="timeline-where">Syed Professional Services</span>
@@ -526,9 +561,9 @@
             </ul>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-mark"></div>
-          <div class="timeline-body">
+          <div class="timeline-body" data-spot>
             <div class="timeline-head">
               <h3>Independent builds</h3>
               <span class="timeline-where">Freelance &amp; product work</span>
@@ -548,34 +583,35 @@
   <!-- Contact -->
   <section class="section section-contact" id="contact">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
+        <p class="sec-label"><span class="sec-index">// 07</span> ESTABLISH CONNECTION</p>
         <h2>Let's build something that runs your business</h2>
         <p>Small businesses, service firms and teams — if your operations run on paper, spreadsheets or memory, I'd like to help. Replies within 24 hours.</p>
       </div>
       <div class="contact-grid">
-        <a class="contact-card contact-wa" href="https://wa.me/923467560172?text=Hi%20Muhammad%20Atif%2C%20I%20found%20your%20portfolio%20at%20matif157.github.io%20and%20I%20have%20a%20project%20to%20discuss." target="_blank" rel="noopener">
+        <a class="contact-card contact-wa reveal" data-spot href="https://wa.me/923467560172?text=Hi%20Muhammad%20Atif%2C%20I%20found%20your%20portfolio%20at%20matif157.github.io%20and%20I%20have%20a%20project%20to%20discuss." target="_blank" rel="noopener">
           <span class="contact-label">WhatsApp (fastest)</span>
           <span class="contact-value">+92 346 7560172</span>
           <span class="contact-hint">Tap to chat with a pre-filled message</span>
         </a>
-        <a class="contact-card" href="mailto:matifzahoor1577@gmail.com?subject=Project%20enquiry%20from%20your%20portfolio&body=Hi%20Muhammad%20Atif%2C%0A%0AI%20saw%20your%20portfolio%20at%20matif157.github.io.%20Here%20is%20what%20I%20need%3A%0A%0A-%20Business%3A%20%0A-%20What%20I%20want%20to%20fix%2Fbuild%3A%20%0A-%20Timeline%3A%20%0A%0AThanks.">
+        <a class="contact-card reveal" data-reveal-delay="60" data-spot href="mailto:matifzahoor1577@gmail.com?subject=Project%20enquiry%20from%20your%20portfolio&body=Hi%20Muhammad%20Atif%2C%0A%0AI%20saw%20your%20portfolio%20at%20matif157.github.io.%20Here%20is%20what%20I%20need%3A%0A%0A-%20Business%3A%20%0A-%20What%20I%20want%20to%20fix%2Fbuild%3A%20%0A-%20Timeline%3A%20%0A%0AThanks.">
           <span class="contact-label">Email</span>
           <span class="contact-value">matifzahoor1577@gmail.com</span>
           <span class="contact-hint">Pre-filled project brief — just finish the blanks</span>
         </a>
-        <a class="contact-card" href="https://www.upwork.com/freelancers/~011c6c1167bf525459" target="_blank" rel="noopener">
+        <a class="contact-card reveal" data-reveal-delay="120" data-spot href="https://www.upwork.com/freelancers/~011c6c1167bf525459" target="_blank" rel="noopener">
           <span class="contact-label">Upwork</span>
           <span class="contact-value">freelancers/~011c6c1167bf525459</span>
         </a>
-        <a class="contact-card" href="https://www.fiverr.com/atifdhair557" target="_blank" rel="noopener">
+        <a class="contact-card reveal" data-reveal-delay="180" data-spot href="https://www.fiverr.com/atifdhair557" target="_blank" rel="noopener">
           <span class="contact-label">Fiverr</span>
           <span class="contact-value">atifdhair557</span>
         </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/muhammad-atif-932824287" target="_blank" rel="noopener">
+        <a class="contact-card reveal" data-reveal-delay="240" data-spot href="https://www.linkedin.com/in/muhammad-atif-932824287" target="_blank" rel="noopener">
           <span class="contact-label">LinkedIn</span>
           <span class="contact-value">/in/muhammad-atif-932824287</span>
         </a>
-        <a class="contact-card" href="https://github.com/matif157" target="_blank" rel="noopener">
+        <a class="contact-card reveal" data-reveal-delay="300" data-spot href="https://github.com/matif157" target="_blank" rel="noopener">
           <span class="contact-label">GitHub</span>
           <span class="contact-value">github.com/matif157</span>
         </a>
@@ -597,124 +633,8 @@
   </div>
 </footer>
 
-<script>
-  document.documentElement.classList.add('js');
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  var smooth = document.querySelectorAll('a[href^="#"]');
-  smooth.forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      var id = a.getAttribute('href');
-      if (id === '#top') return;
-      var el = document.querySelector(id);
-      if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
-
-  // No-JS safety first: unhide default business blocks
-  var cards = document.querySelectorAll('[data-card]');
-  cards.forEach(function (card) {
-    var biz = card.querySelector('[data-block="business"]');
-    if (biz) biz.hidden = false;
-  });
-
-  // Dual-view toggle
-  var viewBtns = document.querySelectorAll('.view-btn');
-  viewBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var v = btn.getAttribute('data-view');
-      viewBtns.forEach(function (b) {
-        b.classList.toggle('is-active', b === btn);
-        b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
-      });
-      cards.forEach(function (card) {
-        card.querySelectorAll('[data-block]').forEach(function (blk) {
-          blk.hidden = blk.getAttribute('data-block') !== v;
-        });
-      });
-    });
-  });
-
-  // Reveal + counters on scroll
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduced) {
-    document.querySelectorAll('.count').forEach(function (c) { c.textContent = c.dataset.count; });
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var el = entry.target;
-        el.classList.add('is-in');
-        if (el.classList.contains('count')) animateCount(el);
-        io.unobserve(el);
-      });
-    }, { threshold: 0.35 });
-    document.querySelectorAll('.metric-num, .count, .project, .cap, .gate-card').forEach(function (el) {
-      io.observe(el);
-    });
-    function animateCount(el) {
-      var target = parseInt(el.dataset.count, 10), t0 = null;
-      function tick(t) {
-        if (!t0) t0 = t;
-        var p = Math.min((t - t0) / 900, 1);
-        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    }
-  }
-
-  // Live GitHub activity with hard fallback
-  var ghNote = document.getElementById('gh-note');
-  var ghList = document.getElementById('gh-repos');
-  var fallback = [
-    { name: 'asif-snooker-club', desc: 'Club management CRM — live tables, billing, bookings, payments, reports. Docker-ready.', lang: 'PHP', stars: 0, top: true },
-    { name: 'gravityh', desc: 'Event-driven professional-services CRM with automation and AI hooks.', lang: 'PHP', stars: 0, top: true },
-    { name: 'syed-professional-crm', desc: 'Production CRM platform with installer and server re-configure screen.', lang: 'PHP', stars: 0, top: true },
-    { name: 'matif157.github.io', desc: 'This portfolio — vanilla HTML/CSS/JS, zero dependencies.', lang: 'HTML', stars: 0, top: true }
-  ];
-  function renderRepos(repos) {
-    ghList.innerHTML = '';
-    repos.forEach(function (r) {
-      var li = document.createElement('li');
-      var url = 'https://github.com/matif157/' + r.name;
-      li.className = 'gh-repo';
-      li.innerHTML =
-        '<a class="gh-name" href="' + url + '" target="_blank" rel="noopener">' + r.name + ' &#8599;</a>' +
-        '<span class="gh-desc">' + (r.desc || '') + '</span>' +
-        '<span class="gh-meta"><span class="gh-lang">● ' + (r.lang || 'n/a') + '</span>' +
-        '<span>★ ' + (r.stars || 0) + '</span>' +
-        '<span class="gh-upd">' + (r.upd || '') + '</span></span>';
-      ghList.appendChild(li);
-    });
-  }
-  function daysAgo(iso) {
-    if (!iso) return '';
-    var d = Math.round((Date.now() - new Date(iso).getTime()) / 86400000);
-    if (d <= 1) return 'updated today';
-    if (d < 30) return 'updated ' + d + 'd ago';
-    return 'updated ' + Math.round(d / 30) + 'mo ago';
-  }
-  var done = false;
-  var whitelist = ['asif-snooker-club', 'gravityh', 'syed-professional-crm', 'matif157.github.io'];
-  fetch('https://api.github.com/users/matif157/repos?sort=updated&per_page=40')
-    .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
-    .then(function (data) {
-      var keep = (data || []).filter(function (r) {
-        return whitelist.indexOf(r.name) !== -1 && !r.archived;
-      });
-      if (!keep.length) throw new Error('empty');
-      done = true;
-      ghNote.textContent = 'Live from GitHub (api.github.com):';
-      renderRepos(keep.map(function (r) {
-        return { name: r.name, desc: r.description || '', lang: r.language, stars: r.stargazers_count, upd: daysAgo(r.updated_at), top: !r.fork };
-      }));
-    })
-    .catch(function () {
-      if (done) return;
-      ghNote.textContent = 'Live fetch unavailable — verified snapshot:';
-      renderRepos(fallback);
-    });
-</script>
+<noscript>
+  <style>.no-scroll{overflow:auto!important}.cursor,.progress{display:none!important}.reveal{opacity:1!important;transform:none!important}[data-block="built"]{display:none!important}</style>
+</noscript>
 </body>
 </html>
