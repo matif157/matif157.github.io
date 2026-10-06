@@ -1,0 +1,70 @@
+MUHAMMAD ATIF
+CRM & Business Software Developer
+
+CONTACT
+• Email: matifzahoor1577@gmail.com
+• WhatsApp: +92 346 7560172
+• Location: Faisalabad, Pakistan (UTC+5)
+• Website: https://matif157.github.io
+• LinkedIn: linkedin.com/in/muhammad-atif-932824287
+
+PROFESSIONAL SUMMARY
+CRM and Business Software Developer with 1+ years experience designing and building production CRM systems that automate sales, billing, operations & reporting. PHP / MySQL / Laravel. Production systems in daily use, all projects open on GitHub. Expertise in custom MVC architecture, RBAC with permission matrices, CSRF protection, audit logging, and backend infrastructure visualization.
+
+CORE COMPETENCIES
+• CRM Development: Custom PHP/MySQL CRM systems, Perfex CRM, Gravity CRM customization
+• Backend Engineering: PHP 8, MySQL/MariaDB, Laravel, REST APIs, Database design & optimization
+• Workflow Automation: WhatsApp Business API integration, cron jobs, scheduled jobs, email automation
+• Security: CSRF protection, throttling, RBAC, audit logging, data hardening
+• Database: MySQL/MariaDB, prepared statements, indexes for reporting queries, export pipelines
+• Deployment: Standard shared hosting, Docker, VPS — zero platform lock-in, data portability
+• Staff Training: Picture-based Urdu/English guides, non-technical adoption in days
+• System Architecture: Custom MVC, event-driven modules, permission matrices, configurability
+
+PORTFOLIO HIGHLIGHTS
+• Asif Snooker Club CRM — Live table management, automatic billing with peak/night rates, payment tracking (cash/JazzCash/card), WhatsApp reminders, daily/weekly reports. 52 members, 229 sessions, 3 live tables.
+• Gravity CRM — Event-driven professional-services CRM with automation hooks, AI orchestration for summarization and triage, RBAC with scoped permissions.
+• Syed Professional CRM Platform — Installer-based CRM that non-developers can own. Runs on standard shared hosting with first-run installer and server re-configure screen.
+
+CERTIFICATIONS
+• HubSpot CRM Certification — Inbound Sales & Marketing (Completed)
+• Google Analytics Individual Qualification
+• Microsoft Azure Fundamentals (AZ-900) — Cloud basics
+
+TECHNICAL SKILLS
+Languages: PHP 8, SQL, HTML5, CSS3, JavaScript, jQuery
+Frameworks: Laravel, CodeIgniter, vanilla JS, Alpine.js
+Tools: Docker, Linux Composer, Git, Postman, VS Code, cPanel/WHM
+Methods: Agile, Scrum, RBAC, CSRF protection, Audit logging, Picture-based training
+Deployment: Shared hosting, VPS, Docker, tunnel-friendly URLs
+
+EXPERIENCE
+CRM & Business Software Developer | Freelance & Independent Builds | 2024 – Present
+• Design and build custom CRM systems in PHP and MySQL for small businesses and professional firms
+• Develop and customize Perfex CRM and proprietary Gravity CRM for client workflows
+• Implement lead management, invoicing, workflows, automations and reporting dashboards
+• Optimize MySQL queries and harden applications (CSRF, throttling, RBAC, audit logs)
+• Train non-technical staff with picture-based guides in Urdu/English — adoption in days
+• Deploy on standard shared hosting, Docker, or VPS — zero platform dependency
+• Publish every project open-source so clients and developers can inspect and extend it
+
+INDEPENDENT BUILDS | Ongoing | 2024 – Present
+• End-to-end custom CRM builds — from requirements to deployment and staff training
+• Train staff in Urdu with picture-based guides and provide ongoing production support
+• Publish every project open-source so clients and developers can inspect and extend it
+
+EDUCATION
+(Fill with your actual degree/diploma)
+
+CERTIFICATIONS
+• HubSpot CRM Certification — Inbound Sales & Marketing
+• Google Analytics Individual Qualification
+• Microsoft Azure Fundamentals (AZ-900) — Cloud basics
+
+AVAILABILITY
+Immediate start. Committed to delivery on time with documented code and full source access.
+Open to: CRM development roles, freelance builds, automation projects, ongoing production support.
+Remote worldwide (UTC+5).
+
+SKILLS FOR QUICK SCAN
+PHP, MySQL, CRM Software, Laravel, JavaScript, Alpine.js, Chart.js, Docker, Linux, Git, REST API, Workflow Automation, RBAC, Audit Logging, Billing Systems, WhatsApp Integration, CSV Import/Export, Shared Hosting Deployment
