@@ -23,7 +23,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Muhammad Atif",
-  "jobTitle": "CRM & Business Software Developer",
+  "jobTitle": "CRM & Business Software Developer · Full Stack PHP Developer",
   "url": "https://matif157.github.io",
   "image": "https://matif157.github.io/assets/atif-profile.jpg",
   "email": "mailto:matifzahoor1577@gmail.com",
@@ -64,7 +64,7 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#top">Muhammad Atif<span class="brand-dot">.</span></a>
+    <a class="brand" href="#top">Muhammad Atif<span class="brand-dot">.</span><span class="developer-title">Full Stack PHP Developer</span></a>
     <nav class="site-nav" aria-label="Primary">
       <a href="#work" data-nav>Work</a>
       <a href="#for-owners" data-nav>Owners</a>
@@ -103,6 +103,7 @@
           <a class="btn btn-primary" href="#work" data-mag>See the live systems</a>
           <a class="btn btn-ghost" href="assets/Muhammad-Atif-Resume-Updated.pdf" target="_blank" rel="noopener" data-mag>Resume .pdf &#8599;</a>
           <a class="btn btn-ghost" href="assets/Muhammad-Atif-Resume-Updated.docx" target="_blank" rel="noopener" data-mag>Resume .docx &#8599;</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/muhammad-atif-932824287" target="_blank" rel="noopener" data-mag>LinkedIn &#8599;</a>
         </div>
         <div class="hero-meta reveal" data-reveal-delay="240">
           <span>Faisalabad, Pakistan · UTC+5</span>
@@ -366,6 +367,74 @@
             </div>
           </div>
         </article>
+                <article class="project" data-card data-spot>
+          <div class="project-body">
+            <span class="tag">Personal AI · Open source</span>
+            <h3>Atif Assistant — Personal Intelligence System</h3>
+            <div class="project-copy" data-block="business">
+              <p class="lede">
+                Atif Assistant is a personal intelligence system that runs locally, keeps memory persistent, and prioritizes honesty over agreeability. It thinks with you, challenges assumptions, and tracks patterns before they become problems.
+              </p>
+              <ul class="feature-list">
+                <li>Persistent local memory — context stays with you, not lost between sessions</li>
+                <li>Reality Engine — labels every claim and separates fact from inference</li>
+                <li>Challenge Mode — argues against you when the question is unmeasurable or self-defeating</li>
+                <li>Pattern Radar — detects recurring behaviour and surfaces early warnings</li>
+                <li>Repetition escalation — recognizes loops and forces the underlying need to be addressed</li>
+                <li>Automatic routing — decides answered/decided/challenged based on the question's nature</li>
+              </ul>
+            </div>
+            <div class="project-copy" data-block="built" hidden>
+              <p class="lede">
+                A locally-runnable assistant with structured reasoning, traceable memory, and routing logic designed for creative problem-solving and honest decision support.
+              </p>
+              <ul class="feature-list">
+                <li>Python-based with local-first storage; browser UI for cross-device access</li>
+                <li>Route strip shows reasoning for each response (no black-box verdicts)</li>
+                <li>Honest defaults: unclassified requests default to challenged, not agreeable</li>
+                <li>Free-tier capable — works with or without external keys for core retrieval</li>
+                <li>Escalation on repeated question classes to break unproductive loops</li>
+              </ul>
+              <div class="project-meta"><span>Python</span><span>Local-first</span><span>Memory</span><span>Pattern Detection</span></div>
+            </div>
+            <div class="project-links">
+              <a class="btn btn-ghost btn-sm" href="https://github.com/matif157/atif-assistant" target="_blank" rel="noopener" data-mag>Source on GitHub &#8599;</a>
+            </div>
+          </div>
+        </article>
+        <article class="project" data-card data-spot>
+          <div class="project-body">
+            <span class="tag">Personal Assistant · Open source</span>
+            <h3>Jarvis — Personal Assistant</h3>
+            <div class="project-copy" data-block="business">
+              <p class="lede">
+                Jarvis is a local-first personal assistant built for focus, note capture, insight surfacing, and automating small tasks. Designed to be useful, extensible, and privacy-first.
+              </p>
+              <ul class="feature-list">
+                <li>Local-first — runs on your machine, data stays under your control</li>
+                <li>Privacy-minded — minimizes external data exposure</li>
+                <li>Extensible — add tools/commands as your workflow evolves</li>
+                <li>Lightweight — minimal dependencies, fast and responsive</li>
+                <li>Capture, recall, and act — built around keeping context in one place</li>
+              </ul>
+            </div>
+            <div class="project-copy" data-block="built" hidden>
+              <p class="lede">
+                Minimal scaffold designed for creative problem-solving workflows — easy to extend with custom tools while keeping operations local and predictable.
+              </p>
+              <ul class="feature-list">
+                <li>Simple, modular structure for rapid extension</li>
+                <li>Runs locally; easy to self-host and customize</li>
+                <li>Clean foundation to plug in automations and local APIs</li>
+                <li>Privacy-first defaults with no unnecessary tracking</li>
+              </ul>
+              <div class="project-meta"><span>Open-source</span><span>Local-first</span><span>Automation</span></div>
+            </div>
+            <div class="project-links">
+              <a class="btn btn-ghost btn-sm" href="https://github.com/matif157/jarvis" target="_blank" rel="noopener" data-mag>Source on GitHub &#8599;</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -445,12 +514,23 @@
         </code>
       </div>
 
-      <div class="gh-head reveal">
-        <h3 class="subhead">Live open-source activity</h3>
-        <span class="live-badge"><i class="live-dot"></i>syncing from api.github.com</span>
+      <div class="github-realtime reveal" id="github-realtime">
+        <div class="gh-head">
+          <h3 class="subhead">github.realtime</h3>
+          <span class="live-badge" id="gh-live-badge"><i class="live-dot"></i>syncing from api.github.com</span>
+        </div>
+        <p class="subtext" id="gh-note">Fetching public events…</p>
+        <div class="gh-live-feed-wrap" aria-live="polite">
+          <ul id="gh-live-feed" class="gh-live-feed"></ul>
+        </div>
+        <div class="gh-repos-wrap">
+          <ul id="gh-repos" class="gh-repos" aria-live="polite"></ul>
+        </div>
+        <div class="gh-verified">
+          <span class="badge-verified"><i class="live-dot"></i>verified production snapshot</span>
+          <p class="subtext">Flagship repos are private: asif-snooker-club, gravityh, syed-professional-crm — source on request. Public repos shown with live event feed.</p>
+        </div>
       </div>
-      <p class="subtext" id="gh-note">Fetching from GitHub…</p>
-      <ul id="gh-repos" class="gh-repos" aria-live="polite"></ul>
     </div>
   </section>
 
@@ -486,7 +566,7 @@
             <li>Open-source repos: <a href="https://github.com/matif157" target="_blank" rel="noopener">github.com/matif157</a></li>
             <li>Live demo: <a href="https://asif-snooker-club.site.je" target="_blank" rel="noopener">asif-snooker-club.site.je</a> — try the login yourself</li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-atif-932824287" target="_blank" rel="noopener">muhammad-atif-932824287</a></li>
-            <li>Resume: <a href="assets/Muhammad-Atif-CRM-Developer-Resume-v2.pdf" target="_blank" rel="noopener">.pdf</a> · <a href="assets/Muhammad-Atif-CRM-Developer-Resume-v2.docx" target="_blank" rel="noopener">.doc</a></li>
+            <li>Resume: <a href="assets/Muhammad-Atif-Resume-Updated.pdf" target="_blank" rel="noopener">.pdf</a> · <a href="assets/Muhammad-Atif-Resume-Updated.docx" target="_blank" rel="noopener">.doc</a></li>
           </ul>
         </div>
       </div>

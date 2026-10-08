@@ -113,6 +113,13 @@ ul{list-style:none}
   color:#fff;display:flex;align-items:center;gap:2px;
 }
 .brand-dot{color:var(--acc);text-shadow:0 0 14px rgba(34,211,238,.8)}
+.developer-title{
+  color:var(--acc);
+  font-size:0.85rem;
+  margin-left:4px;
+  opacity:0.9;
+  font-weight:400;
+}
 .site-nav{display:flex;gap:26px;margin-left:24px}
 .site-nav a{
   position:relative;font-size:.86rem;font-weight:600;color:var(--txt-2);
@@ -610,3 +617,17 @@ a.btn{text-decoration:none}
   .section{padding:56px 0}
   .status-strip{display:none}
 }
+/* github.realtime */
+.github-realtime{margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(34,211,238,.08),transparent);box-shadow:0 0 0 1px rgba(34,211,238,.12) inset}
+.gh-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.gh-live-feed-wrap{margin:10px 0 14px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(5,7,13,.8)}
+.gh-live-feed{display:flex;flex-direction:column;gap:4px;max-height:160px;overflow:auto;padding:8px 10px}
+.gh-live-row{display:flex;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:.8rem;color:var(--txt-3)}
+.ev-tag{color:var(--acc);font-weight:600}
+.ev-repo{color:var(--txt);font-weight:600}
+.ev-ref{color:var(--txt-3);opacity:.9}
+.ev-ts{color:var(--txt-3);opacity:.7}
+.badge-verified{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid rgba(34,211,238,.55);color:var(--acc);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+.badge-verified.small{padding:2px 8px;font-size:.7rem}
+.gh-verified{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.btn-press:active{transform:scale(.98)}

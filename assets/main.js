@@ -211,6 +211,29 @@
   /* Initialize cursor trail */
   initTrail();
 
+  
+/* ---------- Radar ring effect ---------- */
+var rings = [];
+function addRadarRing(x, y) {
+  rings.push({ x: x, y: y, r: 0, maxR: 180, life: 1, width: 3 });
+}
+
+/* ---------- Console event feed ---------- */
+var consoleFeed = document.getElementById('live-feed');
+function addConsoleEvent(tag, message) {
+  if (!consoleFeed) return;
+  var REDU = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (REDU) return;
+  var now = new Date();
+  var pad = function(n){return (n<10?'0':'')+n};
+  var ts = pad(now.getHours())+':'+pad(now.getMinutes())+':'+pad(now.getSeconds());
+  var li = document.createElement('li');
+  li.innerHTML = '<span class="ts">'+ts+'</span><span class="ev info">'+tag+' '+message+'</span>';
+  li.style.animation = 'fadeIn 0.2s ease';
+  consoleFeed.appendChild(li);
+  while (consoleFeed.children.length > 7) consoleFeed.removeChild(consoleFeed.firstChild);
+}
+
   /* ---------- Particle network ---------- */
   var net = d.getElementById('net');
   if (net && !REDUCED) {
@@ -444,10 +467,14 @@
   var ghList = d.getElementById('gh-repos');
   if (ghList) {
     var fallback = [
-      { name: 'asif-snooker-club', desc: 'Club management CRM — live tables, billing, bookings, payments, reports. Docker-ready.', lang: 'PHP', stars: 0, top: true },
-      { name: 'gravityh', desc: 'Event-driven professional-services CRM with automation and AI hooks.', lang: 'PHP', stars: 0, top: true },
-      { name: 'syed-professional-crm', desc: 'Production CRM platform with installer and server re-configure screen.', lang: 'PHP', stars: 0, top: true },
-      { name: 'matif157.github.io', desc: 'This portfolio — vanilla HTML/CSS/JS, zero dependencies.', lang: 'HTML', stars: 0, top: true }
+      { name: 'asif-snooker-club', desc: 'Club management CRM — live tables, billing, bookings, payments, reports. Docker-ready.', lang: 'PHP', stars: 0, top: true, private: true },
+      { name: 'gravityh', desc: 'Event-driven professional-services CRM with automation and AI hooks.', lang: 'PHP', stars: 0, top: true, private: true },
+      { name: 'syed-professional-crm', desc: 'Production CRM platform with installer and server re-configure screen.', lang: 'PHP', stars: 0, top: true, private: true },
+      { name: 'matif157.github.io', desc: 'This portfolio — vanilla HTML/CSS/JS, zero dependencies.', lang: 'HTML', stars: 0, top: true, private: false },
+      { name: 'atif-assistant', desc: 'Personal intelligence system: persistent memory, Reality Engine, Challenge Mode, Pattern Radar.', lang: 'Python', stars: 0, top: true, private: false },
+      { name: 'jarvis', desc: 'Local-first personal assistant for focus, notes, insights and small automations.', lang: 'n/a', stars: 0, top: true, private: false },
+      { name: 'claude-crm', desc: 'Flat-file PHP CRM built with Claude AI.', lang: 'PHP', stars: 0, top: true, private: false },
+      { name: 'grokcrm', desc: 'Grok-generated dark-theme CRM.', lang: 'PHP', stars: 0, top: true, private: false }
     ];
     function es(s) {
       var t = d.createElement('textarea'); t.textContent = s == null ? '' : String(s); return t.innerHTML;
@@ -458,12 +485,23 @@
         var li = d.createElement('li');
         li.className = 'gh-repo';
         var url = 'https://github.com/matif157/' + encodeURIComponent(r.name);
-        li.innerHTML =
-          '<a class="gh-name" href="' + url + '" target="_blank" rel="noopener">' + es(r.name) + ' &#8599;</a>' +
-          '<span class="gh-desc">' + es(r.desc) + '</span>' +
-          '<span class="gh-meta"><span class="gh-lang">● ' + es(r.lang || 'n/a') + '</span>' +
-          '<span>★ ' + (r.stars || 0) + '</span>' +
-          (r.upd ? '<span>' + es(r.upd) + '</span>' : '') + '</span>';
+        var isPrivate = r.private === true || r.private === 'true';
+        var title = isPrivate ? es(r.name) + ' <span class="badge-verified small">private · source on request</span>' : '<a class="gh-name" href="' + url + '" target="_blank" rel="noopener">' + es(r.name) + ' &#8599;</a>';
+        var desc = es(r.desc);
+        if (isPrivate) {
+          li.innerHTML =
+            '<span class="gh-name">' + title + '</span>' +
+            '<span class="gh-desc">' + desc + '</span>' +
+            '<span class="gh-meta"><span class="gh-lang">● ' + es(r.lang || 'n/a') + '</span>' +
+            (r.upd ? '<span>' + es(r.upd) + '</span>' : '') + '<span>source on request</span></span>';
+        } else {
+          li.innerHTML =
+            '<a class="gh-name" href="' + url + '" target="_blank" rel="noopener">' + es(r.name) + ' &#8599;</a>' +
+            '<span class="gh-desc">' + desc + '</span>' +
+            '<span class="gh-meta"><span class="gh-lang">● ' + es(r.lang || 'n/a') + '</span>' +
+            '<span>★ ' + (r.stars || 0) + '</span>' +
+            (r.upd ? '<span>' + es(r.upd) + '</span>' : '') + '</span>';
+        }
         ghList.appendChild(li);
       });
     }
@@ -475,7 +513,7 @@
       return 'updated ' + Math.round(dd / 30) + 'mo ago';
     }
     var done = false;
-    var whitelist = ['asif-snooker-club', 'gravityh', 'syed-professional-crm', 'matif157.github.io'];
+    var whitelist = ['asif-snooker-club', 'gravityh', 'syed-professional-crm', 'matif157.github.io', 'atif-assistant', 'jarvis', 'claude-crm', 'grokcrm'];
     var badge = ghNote || d.querySelector('.live-badge');
     fetch('https://api.github.com/users/matif157/repos?sort=updated&per_page=40')
       .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
@@ -488,7 +526,7 @@
         if (ghNote) ghNote.textContent = 'Live from GitHub (api.github.com):';
         if (badge) badge.innerHTML = '<i class="live-dot"></i>live · api.github.com';
         renderRepos(keep.map(function (r) {
-          return { name: r.name, desc: r.description || '', lang: r.language, stars: r.stargazers_count, upd: daysAgo(r.updated_at), top: !r.fork };
+          return { name: r.name, desc: r.description || '', lang: r.language, stars: r.stargazers_count, upd: daysAgo(r.updated_at), top: !r.fork, private: r.private };
         }));
       })
       .catch(function () {
@@ -497,5 +535,27 @@
         if (badge) badge.innerHTML = '<i class="live-dot"></i>verified snapshot';
         renderRepos(fallback);
       });
+    /* ---------- Live GitHub public events (themed feed) ---------- */
+    var ghLiveFeed = document.getElementById('gh-live-feed');
+    if (ghLiveFeed) {
+      fetch('https://api.github.com/users/matif157/events/public?per_page=15')
+        .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
+        .then(function (events) {
+          var pushEvents = (events || []).filter(function (e) { return e.type === 'PushEvent' && e.repo && e.repo.name; }).slice(0, 10);
+          if (!pushEvents.length) return;
+          ghLiveFeed.innerHTML = '';
+          pushEvents.forEach(function (e) {
+            var repo = e.repo.name.replace('matif157/', '');
+            var ref = e.payload && e.payload.ref ? e.payload.ref : '';
+            var ts = e.created_at ? e.created_at.slice(0, 19).replace('T', ' ') : '';
+            var li = document.createElement('li');
+            li.className = 'gh-live-row';
+            li.innerHTML = '<span class="ev-tag">{push}</span> <span class="ev-repo">' + es(repo) + '</span> <span class="ev-ref">' + es(ref) + '</span> <span class="ev-ts">' + es(ts) + '</span>';
+            ghLiveFeed.appendChild(li);
+          });
+        })
+        .catch(function () {});
+    }
+
   }
 })();
