@@ -603,6 +603,23 @@ a.btn{text-decoration:none}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1080px){
+/* Tablet land: 641px - 1080px */
+@media (min-width:641px) and (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .metric-num{font-size:3.5rem}
+  .cstat-k,.cstat-v{font-size:90%}
+}
+
+/* Mobile: under 640px */
+@media (max-width:640px){
+  .container{width:100%}
+  .hero-grid{grid-template-columns:1fr;padding:0 12px}
+  .hero-copy h1{font-size:2rem}
+  .hero-copy p{font-size:.95rem}
+  .hero-actions .btn{width:100%}
+  .status-strip{display:none}
+  .cursor-dot,.cursor-ring{display:none}
+}
   .hero-grid{grid-template-columns:1fr;gap:40px}
   .cap-grid,.skills-grid{grid-template-columns:1fr 1fr}
   .metrics-grid{grid-template-columns:repeat(2,1fr)}
