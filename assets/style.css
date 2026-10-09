@@ -3,6 +3,11 @@
    Theme: "REALTIME / futuristic CRM" — single dark shell
    ============================================================ */
 
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 :root{
   --bg:#05070d;
   --bg-2:#080b14;
