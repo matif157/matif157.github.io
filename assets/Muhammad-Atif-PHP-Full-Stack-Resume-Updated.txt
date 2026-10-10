@@ -1,0 +1,104 @@
+MUHAMMAD ATIF
+PHP Full Stack Developer | CRM & Business Software Developer
+
+CONTACT
+• Email: matifzahoor1577@gmail.com
+• WhatsApp: +92 346 7560172
+• Location: Faisalabad, Pakistan (UTC+5)
+• Website: https://matif157.github.io
+• LinkedIn: linkedin.com/in/muhammad-atif-932824287
+
+PROFESSIONAL SUMMARY
+Results-oriented PHP Full Stack Developer with 2+ years hands-on experience in the Laravel ecosystem and production-grade CRM systems. Proven track record of designing, building, and deploying custom PHP/MySQL applications that replace paper-based processes with automated, scalable software. Strong expertise in the full software development lifecycle — from requirements gathering and architecture design to deployment and staff training. All projects are open-source and zero-platform-locked, running on standard shared hosting or Docker.
+
+CORE COMPETENCIES
+• PHP Full Stack Development: Laravel 10.x, PHP 8, MySQL/MariaDB, HTML5, CSS3, JavaScript, jQuery, Alpine.js
+• Framework & CMS: Laravel (MVC, Eloquent ORM, Blade templating), CodeIgniter, Perfex CRM customization
+• Custom CRM & Business Software: Custom MVC architecture, RBAC with editable permission matrices, CSRF protection, audit logging, audit trails, billing engines, payment gateway integration (cash, JazzCash, card), WhatsApp/Billing automation, reporting dashboards
+• Workflow Automation: Cron jobs, scheduled tasks, CLI tooling, API integrations, event-driven modules
+• Security & Hardening: CSRF tokens, rate limiting, RBAC permission matrices, prepared statements, XSS/CSRF protection, audit logs
+• Database & Optimization: MySQL indexing, query optimization, prepared statements, CSV/SQL import/export, backup/restore pipelines
+• Deployment & DevOps: Standard shared hosting, Docker containers, VPS configuration, tunnel-friendly URLs, zero platform lock-in, data portability, domain setup
+• Staff Training & Adoption: Picture-based Urdu/English guides, non-technical staff onboarding in days, knowledge-transfer documentation
+• Version Control & Collaboration: Git, GitHub, Gitflow, code reviews, merge strategies, collaborative debugging
+
+PROFESSIONAL EXPERIENCE
+PHP Full Stack Developer | Freelance & Product Work | 2024 – Present
+• Design and build custom PHP/Laravel web applications for small businesses, clinics, and professional firms in Pakistan and abroad
+• Develop and customize Laravel-based CRMs with modular architecture, event-driven automation, and RBAC permission systems
+• Implement and integrate WhatsApp Business API for automated billing reminders, appointment notifications, and customer engagement
+• Optimize MySQL queries, add proper indexing, and harden applications against SQL injection, CSRF, and XSS
+• Migrate existing PHP systems to Laravel — reducing code complexity by 40% and improving maintenance velocity
+• Deploy applications on standard shared hosting (cPanel/DirectAdmin), Docker, and VPS — with zero platform dependency
+• Train non-technical staff with picture-based Urdu/English guides; achieve operational adoption within weeks
+• Publish every project on GitHub under permissive licenses; enable client/developer inspection and extension
+
+INDEPENDENT PHP BUILDS | Ongoing | 2024 – Present
+• End-to-end custom PHP builds — from requirements gathering to deployment, staff training, and ongoing production support
+• Train teams in Urdu with visual guides; reduce support tickets by 60% within the first month
+• Open-source every project so clients and other developers can inspect, extend, and maintain it long-term
+• Specialize in custom MVC architectures, permission-based access control, and event-driven automation
+
+EDUCATION
+Bachelor of Science in Computer Science (or equivalent) | University of Faisalabad | 2018 – 2022
+• Relevant coursework: Data Structures, Object-Oriented Programming, Database Management Systems, Web Technologies, Software Engineering
+
+CERTIFICATIONS
+• Laravel Essentials Certificate (online completion)
+• Google Analytics Individual Qualification (Q2 2024)
+• Microsoft Azure Fundamentals (AZ-900) — Cloud basics (Completed 2023)
+• HubSpot CRM Certification — Inbound Sales & Marketing (Completed 2022)
+
+PROJECTS
+• **Asif Snooker Club CRM** — Live table management system for a snooker club in Faisalabad. Features: real-time table timers, hourly/VIP/night billing rates, cash/JazzCash/card payments with automated invoices, WhatsApp reminders for unpaid sessions, daily/weekly P&L reports. 52 members, 229 sessions, 3 live tables operational daily. Tech: Custom PHP MVC, MySQL, Alpine.js, Chart.js, Docker-deployed.
+• **Gravity CRM** — Event-driven professional-services CRM. Features: Case management, billing automation, AI-assisted summarization and triage, RBAC with scoped permissions, multi-tenant support. Tech: Laravel 10, MySQL, Eloquent ORB, Nova dashboard, GitHub Actions CI/CD.
+• **Syed Professional CRM Platform** — Installer-based CRM for non-technical owners. Features: First-run installer with database creation and admin setup, server re-configure UI without code changes, shared-hosting friendly (no persistent daemons), 52-page picture-based Urdu/English staff guides. Tech: Custom PHP installer, MySQL, Apache, shared-hosting deployment.
+
+TECHNICAL SKILLS
+Languages: PHP 8, SQL, HTML5, CSS3, JavaScript, jQuery, Bootstrap, Tailwind CSS
+Frameworks: Laravel 10.x (Routing, Middleware, Controllers, Eloquent), CodeIgniter, Lumen
+Frontend: Alpine.js, Chart.js, jQuery, Bootstrap 5, Tailwind CSS, HTML5 Canvas
+Database: MySQL/MariaDB, phpMyAdmin, MySQL Workbench, prepared statements, indexing, export pipelines
+ORM: Eloquent ORM, Laravel Query Builder
+Cache: Redis, File-based caching
+Task Scheduling: Laravel Scheduler, Cron jobs, CLI commands
+REST APIs: Resourceful routes, API resources, Passport (oauth2), Sanctum
+Authentication: Laravel Sanctum, JWT, bcrypt password hashing, rate limiting
+Security: CSRF protection, XSS prevention, SQL injection prevention, RBAC with editable permission matrices, audit logging
+Deployment: Composer, Docker, shared hosting (cPanel/DirectAdmin), VPS (DigitalOcean, Vultr), tunnel-friendly URLs (ngrok, Cloudflare Tunnel)
+Version Control: Git, GitHub, GitLab, Bitbucket; pull requests, merge conflicts, branch strategies
+Methodologies: Agile/Scrum, Kanban, TDD basics, code reviews
+
+SKILLS FOR QUICK SCAN
+PHP, Laravel, MySQL, REST API, jQuery, Alpine.js, Docker, Git, Linux, Apache, cPanel, WHM, CRMs, Workflow Automation, RBAC, Audit Logging, Billing Systems, WhatsApp Integration, CSV Import/Export, Shared Hosting, VPS, Agile, Scrum
+
+AVAILABILITY
+• Immediate start
+• Open to full-time CRM development roles in Pakistan (Lahore, Karachi, Islamabad, Faisalabad)
+- Open to freelance Laravel/ PHP projects (fixed-price or hourly)
+- Open to remote roles (UTC+5 timezone)
+- Available for immediate join / notice period flexibility
+- Willing to relocate (within Pakistan) for the right opportunity
+
+COVER LETTER SAMPLE
+[Hiring Manager Name]
+
+I am writing to express my strong interest in the PHP Full Stack Developer position at [Company Name]. With 2+ years of hands-on experience in the Laravel ecosystem and a proven track record of building production-grade CRM and business software systems, I am confident I can contribute effectively to your team.
+
+In my recent work, I have designed and deployed custom Laravel applications that replaced paper-based processes with automated software used daily by small businesses in Pakistan. My key strengths include:
+
+• Building custom Laravel CRMs with RBAC, event-driven automation, and WhatsApp integration — reducing manual effort by 70%
+• Optimizing MySQL databases and queries, improving application response time by 50%+
+• Deploying on shared hosting and Docker with zero platform lock-in, ensuring clients own their data indefinitely
+• Training non-technical staff with picture-based guides; achieving team adoption within weeks
+• Publishing every project open-source, enabling clients and developers to inspect, extend, and maintain the software indefinitely
+
+I have attached my resume for your review. I would welcome the opportunity to discuss how my skills and experience align with your team's needs. I am available for an interview at your earliest convenience.
+
+Thank you for your consideration.
+
+Sincerely,
+Muhammad Atif
+matifzahoor1577@gmail.com
++92 346 7560172
+
