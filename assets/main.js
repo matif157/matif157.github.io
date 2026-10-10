@@ -53,6 +53,8 @@
         p.x += p.vx * dt * 60;
         p.y += p.vy * dt * 60;
         p.vy += 0.015 * dt * 60;
+        p.vx *= p.damp;  /* velocity damping for fluid feel */
+        p.vy *= p.damp;
         p.life -= dt;
         var a = Math.max(0, p.life / p.maxLife);
         if (a <= 0) { trailParts.splice(i, 1); continue; }
