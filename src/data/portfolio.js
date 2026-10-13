@@ -45,7 +45,7 @@ export const expertise = [
   {
     tag: 'automation',
     title: 'Workflow Automation',
-    desc: 'Rate and billing engines, scheduled reminders, WhatsApp follow-ups, backups and P&L — the boring work, automated and audited.',
+    desc: 'Rate and billing engines, scheduled reminders, WhatsApp follow-ups, backups and P&L — the tedious work, automated and audited.',
     chips: ['Billing Engines', 'Scheduled Jobs', 'WhatsApp', 'Backups', 'Audit Logs'],
   },
   {
@@ -64,7 +64,7 @@ export const expertise = [
     tag: 'domains',
     title: 'What I Build',
     desc: 'End-to-end business systems: CRMs, club and service-firm software, booking, billing, customer portals and reporting.',
-    chips: ['CRM', 'Club Mgmt', 'Booking', 'Billing', 'HRM', 'Portals'],
+    chips: ['CRM', 'Club Management', 'Bookings', 'Billing', 'HRM', 'Client Portals'],
   },
 ]
 
