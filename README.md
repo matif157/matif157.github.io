@@ -1,17 +1,32 @@
 # matif157.github.io
 
-Personal portfolio & professional online presence for **Muhammad Atif — CRM & Business Software Developer**.
+Personal portfolio for **Muhammad Atif — CRM & Business Software Developer**.
 
-Single-page static site (HTML/CSS/JS, no build step), deployed via GitHub Pages at https://matif157.github.io
+A React + Vite single-page portfolio based on the AxFolio design system (dark ink + ember + cream theme, particle field, magic cursor, preloader curtain, tabbed sections). All site content lives in one file: `src/data/portfolio.js`.
+
+Live at **https://matif157.github.io** — deployed from the `docs/` folder via GitHub Pages.
+
+## Stack
+- React 18 + Vite 5
+- Fraunces · Hanken Grotesk · JetBrains Mono (Google Fonts)
+- GitHub Pages hosting (source: main branch → `/docs`)
 
 ## Run locally
 
 ```bash
-python3 -m http.server 8000
-# open http://localhost:8000
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # compiles static site into docs/
+npm run preview  # preview the production build
 ```
 
-## Stack
-- Vanilla HTML/CSS/JS — zero dependencies, fast, no build tooling
-- Inter + JetBrains Mono (Google Fonts, CDN with system fallbacks)
-- GitHub Pages hosting
+## Structure
+
+```
+src/
+  data/portfolio.js   ← all site content (profile, about, expertise, work, socials)
+  components/         ← Hero, About, Expertise, Work, Contact, Navbar, Preloader, ParticleField, Footer, DownloadCV
+  App.jsx             ← tab routing / panels
+  index.css           ← full theme (design tokens, motion system, responsive)
+public/               ← resume PDF/DOCX, favicon, og image
+```
