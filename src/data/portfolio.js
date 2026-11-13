@@ -97,9 +97,8 @@ export const builds = [
 export const work = [
   {
     title: 'Asif Snooker Club — Club Management CRM',
-    desc: 'A full production club-management system in daily use: live table command center, time-based billing with peak & night rates, bookings & deposits, payments, expenses, P&L, customer portal and WhatsApp reminders. Deployed at a live club in Pakistan.',
+    desc: 'A full production club-management system: live table command center, time-based billing with peak & night rates, bookings & deposits, payments, expenses, P&L, customer portal and WhatsApp reminders. Built for Pakistani snooker clubs — Roman Urdu counter screens, English owner analytics, offline-first, one-time licence. Live demo with sample data is online.',
     tags: ['PHP 8', 'MySQL', 'Billing', 'WhatsApp', 'RBAC'],
-    repo: 'https://github.com/matif157/asif-snooker-club',
     live: 'https://asif-snooker-club.site.je',
     featured: true,
   },
