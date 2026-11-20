@@ -2,14 +2,14 @@
 
 Personal portfolio for **Muhammad Atif — CRM & Business Software Developer**.
 
-The v2 rebuild presents skills and work the way a model router presents models, over a dotted globe of live agent routes. Content is real: GitHub data is fetched from the public API, LinkedIn activity is curated and dated.
+The v2 rebuild presents skills and work the way a model router presents models. The hero is an OpenRouter-style network graph: an MA link mark at the centre, AI models and disciplines around it, and every project, tool, language and live data point branching out. Hover or tap a node to trace its route back to MA. Content is real: GitHub data is fetched from the public API, LinkedIn activity is curated and dated.
 
 Live at **https://matif157.github.io** — deployed from the `docs/` folder via GitHub Pages.
 
 ## Stack
 
 - React 18 + Vite 5, no runtime UI dependencies
-- Plain `<canvas>` globe (fibonacci dot sphere, city hubs, animated arcs, orbiting agent nodes)
+- Inline `<svg>` network graph (radial hubs, curved routes, interactive route highlighting)
 - Plus Jakarta Sans · JetBrains Mono (Google Fonts)
 - GitHub Pages hosting (source: `main` branch → `/docs`)
 
@@ -31,11 +31,12 @@ src/
   data/portfolio.js     ← profile, hero copy, skills-as-models, work, contact
   data/github.json      ← generated build-time GitHub snapshot (user, totals, repos, activity)
   data/activity.json    ← curated LinkedIn posts, certification, follower count
+  data/graph.js         ← network content: hubs, leaves, links, live numbers
   lib/github.js         ← shared GitHub shaping, relative time, language colours
   components/
-    Globe.jsx           ← animated dotted globe
+    NetworkGraph.jsx    ← MA-centred network with hover/tap route tracing
     SunMark.jsx         ← sun logo (nav, footer)
-    Hero.jsx            ← globe hero, stats strip, marquee
+    Hero.jsx            ← headline, network graph, stats strip, marquee
     Models.jsx          ← skills as filterable model cards
     Work.jsx            ← project cards with live/repo status
     GitHubLive.jsx      ← profile panel, recently-pushed feed, repo grid

@@ -1,4 +1,4 @@
-import Globe from './Globe'
+import NetworkGraph from './NetworkGraph'
 import { hero, marquee, profile } from '../data/portfolio'
 
 const Arrow = () => (
@@ -26,10 +26,6 @@ export default function Hero({ github }) {
   return (
     <>
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero__globe">
-          <Globe />
-        </div>
-
         <div className="shell hero__inner">
           <span className="hero__badge">
             <b>
@@ -54,8 +50,8 @@ export default function Hero({ github }) {
               Browse the models
               <Arrow />
             </a>
-            <a className="btn btn--ghost" href="#work">
-              See the work
+            <a className="btn btn--ghost" href="#network">
+              Explore the network
             </a>
           </div>
 
@@ -65,6 +61,8 @@ export default function Hero({ github }) {
             ))}
           </div>
         </div>
+
+        <NetworkGraph github={github} />
 
         <div className="stats">
           <div className="shell stats__grid">
