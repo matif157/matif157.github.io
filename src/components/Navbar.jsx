@@ -1,75 +1,83 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
+import SunMark from './SunMark'
 import { profile } from '../data/portfolio'
 
-export default function Navbar({ tabs, active, onChange }) {
-  const [scrolled, setScrolled] = useState(false)
-  const btnRefs = useRef({})
-  const [indicator, setIndicator] = useState({ left: 0, width: 0 })
-  // The pill is placed instantly on first paint, then slides on later changes —
-  // without this it would visibly grow from the top-left corner on load.
-  const [slidable, setSlidable] = useState(false)
+const LINKS = [
+  ['Models', '#models'],
+  ['Work', '#work'],
+  ['GitHub', '#github'],
+  ['Activity', '#activity'],
+  ['Contact', '#contact'],
+]
+
+export default function Navbar() {
+  const [stuck, setStuck] = useState(false)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll)
+    const onScroll = () => setStuck(window.scrollY > 12)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Slide the pill indicator under the active tab. Re-measure on tab change,
-  // resize, and once web fonts have loaded (button widths shift then).
   useEffect(() => {
-    const move = () => {
-      const el = btnRefs.current[active]
-      if (el) setIndicator({ left: el.offsetLeft, width: el.offsetWidth })
+    if (!open) return undefined
+    const onKey = (event) => {
+      if (event.key === 'Escape') setOpen(false)
     }
-    move()
-    // Enable the slide transition only after the first position has painted.
-    const raf = requestAnimationFrame(() => setSlidable(true))
-    window.addEventListener('resize', move)
-    if (document.fonts?.ready) document.fonts.ready.then(move)
-    return () => {
-      cancelAnimationFrame(raf)
-      window.removeEventListener('resize', move)
-    }
-  }, [active, tabs])
-
-  const onKeyDown = (e) => {
-    const i = tabs.findIndex((t) => t.id === active)
-    if (e.key === 'ArrowRight') onChange(tabs[(i + 1) % tabs.length].id)
-    if (e.key === 'ArrowLeft') onChange(tabs[(i - 1 + tabs.length) % tabs.length].id)
-  }
-
-  const handle = profile.name.toLowerCase().replace(/\s+/g, '.')
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
 
   return (
-    <nav className={scrolled ? 'scrolled' : ''}>
-      <button type="button" className="brand" onClick={() => onChange(tabs[0].id)}>
-        <b>$</b> {handle}
-      </button>
+    <header className={`nav${stuck ? ' is-stuck' : ''}`}>
+      <div className="shell nav__inner">
+        <a className="brand" href="#top" onClick={() => setOpen(false)}>
+          <SunMark className="brand__mark" size={28} />
+          <span className="brand__name">
+            {profile.name}
+            <small>{profile.role}</small>
+          </span>
+        </a>
 
-      <div className="tabs" role="tablist" aria-label="Sections" onKeyDown={onKeyDown}>
-        <span
-          className={`tab-indicator${slidable ? ' slidable' : ''}`}
-          style={{ transform: `translateX(${indicator.left}px)`, width: indicator.width }}
-        />
-        {tabs.map((t, i) => (
+        <nav className="nav__links" aria-label="Sections">
+          {LINKS.map(([label, href]) => (
+            <a className="nav__link" href={href} key={href}>
+              {label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="nav__cta">
+          <span className="nav__status">
+            <span className="live-dot" />
+            {profile.availability}
+          </span>
+          <a className="btn btn--primary btn--sm" href="#contact">
+            Let&rsquo;s talk
+          </a>
           <button
             type="button"
-            key={t.id}
-            id={`tab-${t.id}`}
-            ref={(el) => (btnRefs.current[t.id] = el)}
-            className={`tab${active === t.id ? ' active' : ''}`}
-            role="tab"
-            aria-selected={active === t.id}
-            aria-controls={`panel-${t.id}`}
-            tabIndex={active === t.id ? 0 : -1}
-            onClick={() => onChange(t.id)}
+            className={`nav__toggle${open ? ' is-open' : ''}`}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
           >
-            <span className="tab-num">{String(i + 1).padStart(2, '0')}</span>
-            {t.label}
+            <span />
           </button>
-        ))}
+        </div>
       </div>
-    </nav>
+
+      {open && (
+        <nav className="nav__mobile" aria-label="Sections">
+          {LINKS.map(([label, href]) => (
+            <a href={href} key={href} onClick={() => setOpen(false)}>
+              {label}
+            </a>
+          ))}
+        </nav>
+      )}
+    </header>
   )
 }

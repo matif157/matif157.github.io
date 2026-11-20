@@ -1,49 +1,95 @@
-import { profile, lede } from '../data/portfolio'
-import DownloadCV from './DownloadCV'
+import Globe from './Globe'
+import { hero, marquee, profile } from '../data/portfolio'
 
-export default function Hero({ onNavigate }) {
-  const [first, ...rest] = profile.name.split(' ')
-  const last = rest.join(' ')
-  const initials = (first[0] || '') + (last[0] || '')
+const Arrow = () => (
+  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <path
+      d="M4 12 12 4M5.5 4H12v6.5"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
+
+export default function Hero({ github }) {
+  const publicRepos = github?.totals?.publicRepos ?? 10
+
+  const stats = [
+    { value: profile.totalRepos, suffix: '+', label: 'Repositories' },
+    { value: publicRepos, suffix: '', label: 'Public repos' },
+    { value: profile.productionSystems, suffix: '', label: 'Production systems' },
+    { value: profile.crmCodebases, suffix: '', label: 'CRM codebases' },
+  ]
 
   return (
-    <header>
-      <div className="glow" />
-      <div className="glow glow-2" />
-      <div className="wrap">
-        <div className="hero-id reveal">
-          <span className="hero-avatar">{initials}</span>
-          <span className="eyebrow">CRM &amp; Business Software — {profile.location}</span>
+    <>
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero__globe">
+          <Globe />
         </div>
-        <h1 className="reveal">
-          {first} <em>{last}</em>
-        </h1>
-        <div className="hero-role reveal">{profile.role}</div>
-        <p className="hero-lede reveal" dangerouslySetInnerHTML={{ __html: lede }} />
-        <div className="hero-cta reveal">
-          <button type="button" className="btn btn-solid" onClick={() => onNavigate('work')}>
-            View selected work →
-          </button>
-          <button type="button" className="btn btn-ghost" onClick={() => onNavigate('contact')}>
-            Let's talk
-          </button>
-          {profile.resume && (profile.resume.pdf || profile.resume.docx) && (
-            <DownloadCV files={profile.resume} />
-          )}
+
+        <div className="shell hero__inner">
+          <span className="hero__badge">
+            <b>
+              <span className="live-dot" />
+              {hero.badge}
+            </b>
+            {profile.location}
+          </span>
+
+          <h1 id="hero-title">
+            {hero.title.map((line, index) => (
+              <span className="hero__line" key={line}>
+                {index === hero.accentLine ? <span className="accent">{line}</span> : line}
+              </span>
+            ))}
+          </h1>
+
+          <p className="hero__sub">{hero.sub}</p>
+
+          <div className="hero__actions">
+            <a className="btn btn--primary" href="#models">
+              Browse the models
+              <Arrow />
+            </a>
+            <a className="btn btn--ghost" href="#work">
+              See the work
+            </a>
+          </div>
+
+          <div className="hero__meta">
+            {hero.meta.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
         </div>
-        <div className="hero-meta reveal">
-          <div>
-            <span className="status-dot" />
-            Available for production CRM builds
+
+        <div className="stats">
+          <div className="shell stats__grid">
+            {stats.map((stat) => (
+              <div className="stat" key={stat.label}>
+                <div className="stat__value">
+                  {stat.value}
+                  {stat.suffix && <em>{stat.suffix}</em>}
+                </div>
+                <div className="stat__label">{stat.label}</div>
+              </div>
+            ))}
           </div>
-          <div>
-            PHP · MySQL <span>· WhatsApp Automation · AI</span>
-          </div>
-          <div>
-            Est. <span>{profile.since}</span> · {profile.repoCount} public repos
-          </div>
+        </div>
+      </section>
+
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee__track">
+          {[...marquee, ...marquee].map((item, index) => (
+            <span className="marquee__item" key={`${item}-${index}`}>
+              <b>{item}</b>
+            </span>
+          ))}
         </div>
       </div>
-    </header>
+    </>
   )
 }

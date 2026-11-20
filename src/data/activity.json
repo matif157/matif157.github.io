@@ -1,0 +1,37 @@
+{
+  "network": "LinkedIn",
+  "profileUrl": "https://www.linkedin.com/in/muhammad-atif-932824287",
+  "activityUrl": "https://www.linkedin.com/in/muhammad-atif-932824287/recent-activity/all/",
+  "syncedAt": "2026-11-21",
+  "followers": 96,
+  "posts": [
+    {
+      "id": "atif-systems-spreadsheet",
+      "date": "2026-11-07",
+      "type": "Post",
+      "title": "Your business has outgrown the spreadsheet.",
+      "body": "When leads, customer records, invoices, payment updates, tasks and follow-ups sit in separate sheets, chats and notebooks, it becomes difficult to see what needs attention next. At Atif Systems we build custom CRM and business software around the way your business actually works — lead management, follow-ups, billing and collection tracking, role-based dashboards, PHP and MySQL integrations.",
+      "tags": ["CRM", "Business Automation", "Custom Software"],
+      "metrics": { "impressions": 22, "reactions": 1 }
+    },
+    {
+      "id": "hubspot-revops",
+      "date": "2026-09-21",
+      "type": "Certification",
+      "title": "HubSpot Revenue Operations Certified",
+      "body": "Strengthened RevOps fundamentals: sales process mapping, CRM and systems management, cross-functional alignment, SLA and accountability frameworks, and applying RevOps principles to the customer journey. Useful alongside hands-on CRM builds and custom PHP software.",
+      "tags": ["HubSpot", "RevOps", "CRM", "Automation"],
+      "metrics": { "impressions": 109 }
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Revenue Operations Certified",
+      "issuer": "HubSpot Academy",
+      "issued": "August 2026",
+      "validUntil": "September 2028",
+      "credential": "55ec64d132c44c899421018a8a32e87e",
+      "url": "https://academy.hubspot.com/"
+    }
+  ]
+}

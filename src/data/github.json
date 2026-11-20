@@ -1,0 +1,267 @@
+{
+  "syncedAt": "2026-11-20T19:27:21.192Z",
+  "user": {
+    "login": "matif157",
+    "name": "Muhammad Atif",
+    "bio": null,
+    "company": "SYED PROFESSIONAL SERVICES",
+    "location": "Faisalabad",
+    "blog": "Muhammad-atif.site.je",
+    "followers": 0,
+    "following": 1,
+    "publicRepos": 10,
+    "createdAt": "2023-08-26T22:06:10Z"
+  },
+  "totals": {
+    "publicRepos": 10,
+    "stars": 0,
+    "forks": 0,
+    "languages": 4
+  },
+  "languages": [
+    {
+      "name": "Python",
+      "repos": 4,
+      "share": 50
+    },
+    {
+      "name": "PHP",
+      "repos": 2,
+      "share": 25
+    },
+    {
+      "name": "JavaScript",
+      "repos": 1,
+      "share": 12.5
+    },
+    {
+      "name": "HTML",
+      "repos": 1,
+      "share": 12.5
+    }
+  ],
+  "repos": [
+    {
+      "name": "matif157.github.io",
+      "description": "Personal portfolio — Muhammad Atif, CRM & Business Software Developer. Lives at matif157.github.io",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "size": 2226,
+      "url": "https://github.com/matif157/matif157.github.io",
+      "homepage": "https://matif157-github-io.vercel.app",
+      "topics": [
+        "crm",
+        "github-pages",
+        "php",
+        "portfolio",
+        "react",
+        "vite"
+      ],
+      "pushedAt": "2026-11-20T19:05:26Z",
+      "updatedAt": "2026-10-13T11:00:54Z",
+      "createdAt": "2026-09-21T00:37:16Z"
+    },
+    {
+      "name": "odoo-gulf-einvoicing",
+      "description": "Odoo 19 module: ZATCA Phase 1 QR codes and UBL 2.1 e-invoice XML for Saudi Arabia",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "size": 37,
+      "url": "https://github.com/matif157/odoo-gulf-einvoicing",
+      "homepage": null,
+      "topics": [],
+      "pushedAt": "2026-11-17T19:57:33Z",
+      "updatedAt": "2026-11-17T18:54:16Z",
+      "createdAt": "2026-11-17T18:54:05Z"
+    },
+    {
+      "name": "odoo-club-membership",
+      "description": "Odoo 19 club membership module: recurring billing, renewals, overlap protection, tests",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "size": 15,
+      "url": "https://github.com/matif157/odoo-club-membership",
+      "homepage": null,
+      "topics": [],
+      "pushedAt": "2026-11-17T17:56:06Z",
+      "updatedAt": "2026-11-17T17:56:11Z",
+      "createdAt": "2026-11-17T17:55:59Z"
+    },
+    {
+      "name": "atif-assistant",
+      "description": "Raees - personal intelligence system with persistent memory, Reality Engine, Challenge Mode and Pattern Radar",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "size": 5363,
+      "url": "https://github.com/matif157/atif-assistant",
+      "homepage": null,
+      "topics": [
+        "ai",
+        "assistant",
+        "local-first",
+        "memory",
+        "python"
+      ],
+      "pushedAt": "2026-10-21T07:13:57Z",
+      "updatedAt": "2026-10-21T07:14:01Z",
+      "createdAt": "2026-10-06T00:50:42Z"
+    },
+    {
+      "name": "jarvis",
+      "description": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "size": 96769,
+      "url": "https://github.com/matif157/jarvis",
+      "homepage": null,
+      "topics": [],
+      "pushedAt": "2026-10-18T17:26:14Z",
+      "updatedAt": "2026-10-18T17:26:19Z",
+      "createdAt": "2026-10-08T23:25:30Z"
+    },
+    {
+      "name": "matif1577.github.io",
+      "description": null,
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "size": 1480,
+      "url": "https://github.com/matif157/matif1577.github.io",
+      "homepage": "https://matif1577.vercel.app",
+      "topics": [],
+      "pushedAt": "2026-10-13T10:03:28Z",
+      "updatedAt": "2026-10-13T10:03:34Z",
+      "createdAt": "2026-10-13T09:44:29Z"
+    },
+    {
+      "name": "matif157",
+      "description": "Profile — Muhammad Atif, CRM & Business Software Developer. Production PHP/MySQL CRM systems.",
+      "language": null,
+      "stars": 0,
+      "forks": 0,
+      "size": 5,
+      "url": "https://github.com/matif157/matif157",
+      "homepage": "https://github.com/matif157",
+      "topics": [
+        "config",
+        "github-config"
+      ],
+      "pushedAt": "2026-10-13T09:09:06Z",
+      "updatedAt": "2026-10-13T09:09:11Z",
+      "createdAt": "2023-08-27T23:32:19Z"
+    },
+    {
+      "name": "portfolio",
+      "description": "Portfolio — categorized collection of CRM software, websites, and tools",
+      "language": null,
+      "stars": 0,
+      "forks": 0,
+      "size": 16559,
+      "url": "https://github.com/matif157/portfolio",
+      "homepage": null,
+      "topics": [
+        "crm",
+        "monorepo",
+        "mysql",
+        "php",
+        "portfolio"
+      ],
+      "pushedAt": "2026-10-13T08:51:33Z",
+      "updatedAt": "2026-10-13T09:13:02Z",
+      "createdAt": "2026-10-13T08:03:55Z"
+    },
+    {
+      "name": "claude-crm",
+      "description": "Flat-file PHP CRM built with Claude AI - clients, invoices, leads, services, calendar",
+      "language": "PHP",
+      "stars": 0,
+      "forks": 0,
+      "size": 77,
+      "url": "https://github.com/matif157/claude-crm",
+      "homepage": null,
+      "topics": [
+        "crm",
+        "flat-file-database",
+        "open-source",
+        "php"
+      ],
+      "pushedAt": "2026-09-21T03:39:52Z",
+      "updatedAt": "2026-10-13T09:13:07Z",
+      "createdAt": "2026-09-21T02:57:27Z"
+    },
+    {
+      "name": "grokcrm",
+      "description": "Grok-generated dark-theme CRM with banking, cards, and modern UI",
+      "language": "PHP",
+      "stars": 0,
+      "forks": 0,
+      "size": 60,
+      "url": "https://github.com/matif157/grokcrm",
+      "homepage": null,
+      "topics": [
+        "crm",
+        "mysql",
+        "open-source",
+        "php"
+      ],
+      "pushedAt": "2026-09-21T02:58:19Z",
+      "updatedAt": "2026-10-13T09:13:09Z",
+      "createdAt": "2026-09-21T02:57:36Z"
+    }
+  ],
+  "activity": [
+    {
+      "id": "repo-matif157.github.io",
+      "repo": "matif157.github.io",
+      "message": "Personal portfolio — Muhammad Atif, CRM & Business Software Developer. Lives at matif157.github.io",
+      "at": "2026-11-20T19:05:26Z"
+    },
+    {
+      "id": "repo-odoo-gulf-einvoicing",
+      "repo": "odoo-gulf-einvoicing",
+      "message": "Odoo 19 module: ZATCA Phase 1 QR codes and UBL 2.1 e-invoice XML for Saudi Arabia",
+      "at": "2026-11-17T19:57:33Z"
+    },
+    {
+      "id": "repo-odoo-club-membership",
+      "repo": "odoo-club-membership",
+      "message": "Odoo 19 club membership module: recurring billing, renewals, overlap protection, tests",
+      "at": "2026-11-17T17:56:06Z"
+    },
+    {
+      "id": "repo-atif-assistant",
+      "repo": "atif-assistant",
+      "message": "Raees - personal intelligence system with persistent memory, Reality Engine, Challenge Mode and Pattern Radar",
+      "at": "2026-10-21T07:13:57Z"
+    },
+    {
+      "id": "repo-jarvis",
+      "repo": "jarvis",
+      "message": "Repository updated",
+      "at": "2026-10-18T17:26:14Z"
+    },
+    {
+      "id": "repo-matif1577.github.io",
+      "repo": "matif1577.github.io",
+      "message": "Repository updated",
+      "at": "2026-10-13T10:03:28Z"
+    },
+    {
+      "id": "repo-matif157",
+      "repo": "matif157",
+      "message": "Profile — Muhammad Atif, CRM & Business Software Developer. Production PHP/MySQL CRM systems.",
+      "at": "2026-10-13T09:09:06Z"
+    },
+    {
+      "id": "repo-portfolio",
+      "repo": "portfolio",
+      "message": "Portfolio — categorized collection of CRM software, websites, and tools",
+      "at": "2026-10-13T08:51:33Z"
+    }
+  ]
+}

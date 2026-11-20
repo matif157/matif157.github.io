@@ -1,97 +1,74 @@
-import { useEffect, useRef, useState } from 'react'
-import Preloader from './components/Preloader'
-import ParticleField from './components/ParticleField'
+import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import About from './components/About'
-import Expertise from './components/Expertise'
+import Models from './components/Models'
 import Work from './components/Work'
+import GitHubLive from './components/GitHubLive'
+import Activity from './components/Activity'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import { profile } from './data/portfolio'
+import githubSeed from './data/github.json'
+import { summariseRepos } from './lib/github'
 
-const TABS = [
-  { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'expertise', label: 'Expertise' },
-  { id: 'work', label: 'Work' },
-  { id: 'contact', label: 'Contact' },
-]
-
-const PANELS = { home: Hero, about: About, expertise: Expertise, work: Work, contact: Contact }
-
-const TITLES = {
-  home: `${profile.name} — ${profile.role}`,
-  about: `About — ${profile.name}`,
-  expertise: `Expertise — ${profile.name}`,
-  work: `Selected Work — ${profile.name}`,
-  contact: `Contact — ${profile.name}`,
-}
-
-const idx = (id) => TABS.findIndex((t) => t.id === id)
-const fromHash = () => {
-  const h = window.location.hash.replace('#', '')
-  return TABS.some((t) => t.id === h) ? h : 'home'
-}
+const USER = 'matif157'
+const API = 'https://api.github.com'
 
 export default function App() {
-  const [active, setActive] = useState(fromHash)
-  const [dir, setDir] = useState('forward')
-  // 'loading' → splash up, page frozen · 'revealing' → curtain lifting, page animates in · 'ready'
-  const [phase, setPhase] = useState('loading')
-  const activeRef = useRef(active)
-  activeRef.current = active
+  const [github, setGithub] = useState(githubSeed)
 
-  // The URL hash is the source of truth — clicks set it, this keeps state in
-  // sync (and makes the browser back/forward buttons switch tabs).
+  // The build ships a snapshot; this refreshes it from the public API so the
+  // numbers, repositories and recent pushes are live on every visit.
   useEffect(() => {
-    const sync = () => {
-      const next = fromHash()
-      const prev = activeRef.current
-      if (next === prev) return
-      setDir(idx(next) > idx(prev) ? 'forward' : 'back')
-      setActive(next)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+    let alive = true
+    const controller = new AbortController()
+    const timer = window.setTimeout(() => controller.abort(), 9000)
+
+    async function refresh() {
+      try {
+        const response = await fetch(`${API}/users/${USER}/repos?per_page=100&sort=pushed`, {
+          headers: { Accept: 'application/vnd.github+json' },
+          signal: controller.signal,
+        })
+
+        if (!alive || !response.ok) return
+
+        const repos = await response.json()
+        const summary = summariseRepos(repos)
+
+        if (!alive) return
+        setGithub((previous) => ({
+          ...previous,
+          ...summary,
+          syncedAt: new Date().toISOString(),
+        }))
+      } catch {
+        // Rate limit or offline: keep the build snapshot on screen.
+      } finally {
+        window.clearTimeout(timer)
+      }
     }
-    window.addEventListener('hashchange', sync)
-    return () => window.removeEventListener('hashchange', sync)
+
+    refresh()
+
+    return () => {
+      alive = false
+      controller.abort()
+      window.clearTimeout(timer)
+    }
   }, [])
 
-  useEffect(() => {
-    document.title = TITLES[active] || TITLES.home
-  }, [active])
-
-  const go = (id) => {
-    if (id === activeRef.current) return
-    window.location.hash = id === 'home' ? '' : id
-  }
-
-  const Panel = PANELS[active]
-
   return (
-    <>
-      {phase !== 'ready' && (
-        <Preloader
-          onReveal={() => setPhase('revealing')}
-          onDone={() => setPhase('ready')}
-        />
-      )}
-      <div className={`app-shell${phase === 'loading' ? ' booting' : ''}`}>
-      <ParticleField />
-      <Navbar tabs={TABS} active={active} onChange={go} />
-      <main className="tab-stage">
-        <div
-          className={`tab-panel ${dir}`}
-          key={active}
-          role="tabpanel"
-          id={`panel-${active}`}
-          aria-labelledby={`tab-${active}`}
-        >
-          <Panel onNavigate={go} />
-        </div>
+    <div className="site" id="top">
+      <Navbar />
+      <main>
+        <Hero github={github} />
+        <Models />
+        <Work github={github} />
+        <GitHubLive github={github} />
+        <Activity />
+        <Contact />
       </main>
       <Footer />
-      </div>
-    </>
+    </div>
   )
 }
